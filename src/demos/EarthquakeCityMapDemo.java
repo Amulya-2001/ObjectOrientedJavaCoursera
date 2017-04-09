@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Processing library
+import de.fhpotsdam.unfolding.providers.Microsoft;
 import processing.core.PApplet;
 
 //Unfolding libraries
@@ -56,7 +57,7 @@ public class EarthquakeCityMapDemo extends PApplet {
 		size(950, 600, OPENGL);
 
 		// Assume online
-		map = new UnfoldingMap(this, 200, 50, 700, 500, new Google.GoogleMapProvider());
+		map = new UnfoldingMap(this, 200, 50, 700, 500, new Microsoft.HybridProvider());
 //		map = new UnfoldingMap(this, 200, 50, 700, 500, new OpenStreetMap.OpenStreetMapProvider() );
 //	    map = new UnfoldingMap(this, 200, 50, 650, 600, new MBTilesMapProvider(mbTilesString));
 
@@ -96,11 +97,11 @@ public class EarthquakeCityMapDemo extends PApplet {
 	    valdiviaEq.addProperty("magnitude", "9.5");
 	    valdiviaEq.addProperty("date", "March 22, 1960");
 	    valdiviaEq.addProperty("year", 1960);
-	    
+
 	    PointFeature alaskaEq = new PointFeature(new Location(61.02f,-147.65f));
 	    alaskaEq.addProperty("title", "1964 Great Alaska Earthquake");
 	    alaskaEq.addProperty("magnitude", "9.2");
-	    alaskaEq.addProperty("date", "March 28, 1964"); 
+	    alaskaEq.addProperty("date", "March 28, 1964");
 	    alaskaEq.addProperty("year", 1964);
 
 	    PointFeature sumatraEq = new PointFeature(new Location(3.30f,95.78f));
@@ -109,14 +110,14 @@ public class EarthquakeCityMapDemo extends PApplet {
 	    sumatraEq.addProperty("date", "February 26, 2004");
 	    sumatraEq.addProperty("year", 2004);
 
-	    
+
 	    PointFeature japanEq = new PointFeature(new Location(38.322f,142.369f));
 	    japanEq.addProperty("title", "Near the East Coast of Honshu, Japan");
 	    japanEq.addProperty("magnitude", "9.0");
 	    japanEq.addProperty("date", "March 11, 2011");
 	    japanEq.addProperty("year", 2011);
 
-	    
+
 	    PointFeature kamchatkaEq = new PointFeature(new Location(52.76f,160.06f));
 	    kamchatkaEq.addProperty("title", "Kamchatka");
 	    kamchatkaEq.addProperty("magnitude", "9.0");
